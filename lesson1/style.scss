@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+
 }
 
 body {
@@ -12,16 +13,19 @@ body {
     background-color: blue;
   }
 }
+
 @media screen and (max-width: 800px) {
   body {
     background-color: green;
   }
 }
+
 @media screen and (max-width: 600px) {
   body {
     background-color: yellow;
   }
 }
+
 .parent {
   width: 100%;
   max-width: 1200px;
@@ -31,11 +35,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.parent .child {
-  width: 90%;
-  height: 90%;
-  background-color: bisque;
+
+  .child {
+    width: 90%;
+    height: 90%;
+    background-color: bisque;
+  }
 }
 
 .container {
@@ -66,22 +71,25 @@ body {
     padding: 50px;
     padding-inline: 50px;
     padding-block: 50px;
-  }
-  .container .block1,
-  .container .block2,
-  .container .block3 {
-    width: 100%;
+    .block1,
+    .block2,
+    .block3, {
+      width: 100%;
+    }
   }
 }
+
 .header {
   border-bottom: 1px solid #e5e9eb;
   width: 1520px;
   height: 65px;
   background: #fff;
   display: flex;
+
   align-items: center;
   justify-content: space-between;
 }
+
 
 .burger {
   display: none;
@@ -92,6 +100,6 @@ body {
     display: none;
   }
   .burger {
-    display: block;
+      display: block;
   }
 }
