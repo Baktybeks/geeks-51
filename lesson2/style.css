@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --font-family: "Inter", sans-serif;
+  --second-family: "Heebo", sans-serif;
+  --primary-color: #000;
+  --secondary-color: blue;
+}
+
+.parent .child {
+  background-color: red;
+  width: 100px;
+  height: 100px;
+}
+
+.parent {
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.parent .child {
+  background-color: red;
+  width: 100px;
+  height: 100px;
+}
+
+.button {
+  background-color: blue;
+  width: 100px;
+  height: 50px;
+  padding: 50px;
+  font-style: "Arial", sans-serif;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    background-color: green;
+  }
+}
+@media screen and (max-width: 600px) {
+  body {
+    background-color: bisque;
+  }
+}
+.banner {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 96px 200px;
+  width: 1920px;
+  height: 882px;
+  background: #fff;
+}
+
+.title {
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: clamp(60px, 18.75vw, 360px);
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--primary-color);
+}
+
+.banner-info {
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: clamp(10px, 10px + 20 * (100vw - 360px) / 1560, 30px);
+  line-height: 127%;
+  text-transform: uppercase;
+  color: #000;
+  display: flex;
+  align-items: end;
+}
+.banner-info::before {
+  content: "";
+  width: clamp(60px, 60px + 140 * (100vw - 360px) / 1560, 200px);
+  aspect-ratio: 1;
+  margin-right: 30px;
+  background: url("./img/Vector.svg") center/contain no-repeat;
+}
