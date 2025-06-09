@@ -1,0 +1,18 @@
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin button ($width, $height, $bc, $padding:20px) {
+  background-color: $bc;
+  width: $width;
+  height: $height;
+  padding: $padding;
+}
+
+@mixin responsive ($size) {
+  @media screen and (max-width: $size) {
+    @content;
+  }
+}
